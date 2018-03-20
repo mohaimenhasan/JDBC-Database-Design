@@ -12,18 +12,32 @@ public class Assignment3 extends JDBCSubmission {
     @Override
     public boolean connectDB(String url, String username, String password) {
 	    //write your code here.
-            return true;
+        try{
+             connection = DriverManager.getconnection(url, username, password);
+        }
+        catch (Exception e){
+
+        }
+       
+        return true;
     }
 
     @Override
     public boolean disconnectDB() {
 	    //write your code here.
-            return true;
+        try{
+            connection.close();
+        }
+        catch (Exception e){
+
+        }
+        return true;
     }
 
     @Override
     public ElectionResult presidentSequence(String countryName) {
             //Write your code here.
+            
             return null;
 	}
 
