@@ -1,9 +1,12 @@
 -- 1. What constraints from the domain could not be enforced?
 -- Every customer in the car will have to have their driver's licence. This could not be enforced because of passenger limitations and age restrictions
--- Same car can not be reserved more than once at the same date. This requires triggers 
--- CHECK (From_date NOT IN (SELECT From_date FROM reservation as r WHERE r.Car_id = Car_id and (r.status != 'Cancelled' or r.status != 'Completed')))
+
 -- 2. What constraints that could have been enforced were not enforced? Why not? 
 --- Same person can not reserve more than one car at the same time. This can be contained within the relational schema when making a call
+-- Same car can not be reserved more than once at the same date. This requires triggers using the following condition:
+-- CHECK (From_date NOT IN (SELECT From_date FROM reservation as r WHERE r.Car_id = Car_id and (r.status != 'Cancelled' or r.status != 'Completed')))
+
+
 -- Schema for storing a subset of car rental
 
 DROP SCHEMA if exists carschema cascade;
@@ -83,12 +86,6 @@ CREATE TABLE car(
   Model_id INT REFERENCES model(ID)
 );
 
-
--- Reservation Confirmed
-
-CREATE TABLE confirmed_res(
-
-);
 ---- RESERVATION ----
 -- Has a unique reservation ID
 
