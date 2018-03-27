@@ -1,7 +1,9 @@
 -- 1. What constraints from the domain could not be enforced?
--- 
--- 2. What constraints that could have been enforced were not enforced? Why not?
---
+-- Every customer in the car will have to have their driver's licence. This could not be enforced because of passenger limitations and age restrictions
+-- Same car can not be reserved more than once at the same date. This requires triggers 
+-- CHECK (From_date NOT IN (SELECT From_date FROM reservation as r WHERE r.Car_id = Car_id and (r.status != 'Cancelled' or r.status != 'Completed')))
+-- 2. What constraints that could have been enforced were not enforced? Why not? 
+--- Same person can not reserve more than one car at the same time. This can be contained within the relational schema when making a call
 -- Schema for storing a subset of car rental
 
 DROP SCHEMA if exists carschema cascade;
@@ -17,15 +19,15 @@ SET search_path to carschema;
 -- Two customers can't have the same email_id
 
 CREATE TABLE customer(
+  -- Email Address of the customer
+  -- Stored as a primary key as two customers can not have the same email address when they sign up
+  -- Since it is a primary key, it can't be NULL
+  Email VARCHAR(100) PRIMARY KEY,
 	-- Full name of a customer
   -- Assuming name would fit within 100 characters
 	Name VARCHAR(100) NOT NULL,
   -- Can not be anything other than an integer
   Age INT NOT NULL,
-  -- Email Address of the customer
-  -- Stored as a primary key as two customers can not have the same email address when they sign up
-  -- Since it is a primary key, it can't be NULL
-  Email VARCHAR(100) PRIMARY KEY,
   -- Age can't be less than 17
   check (Age>=17)
 );
@@ -74,34 +76,39 @@ CREATE TABLE rentalstation(
 CREATE TABLE car(
 -- Unique ID to identify each car
   ID INT PRIMARY KEY,
-  Licence_plate_number INT NOT NULL UNIQUE,
+  Licence_plate_number VARCHAR(100) NOT NULL UNIQUE,
 -- Station codes are used as a foreign key from rental stations 
   Staion_code INT REFERENCES rentalstation(Station_code),
 -- Two different cars can have the same model IDs
   Model_id INT REFERENCES model(ID)
 );
 
+
+-- Reservation Confirmed
+
+CREATE TABLE confirmed_res(
+
+);
 ---- RESERVATION ----
 -- Has a unique reservation ID
--- (NOT HANDLED YET) Date of reservation: If someone has a reservation in specific time, other people can not reserve same car at the same time
 
 CREATE TABLE reservation(
  -- Unique ID per reservation
  ID INT PRIMARY KEY, 
- From_date TIMESTAMP NOT NULL UNIQUE,
- To_date TIMESTAMP NOT NULL UNIQUE CHECK(To_date >= From_date),
+ -- Date of reservation: If someone has a reservation in specific time, other people can not reserve same car at the same time
+ From_date TIMESTAMP NOT NULL,
+ -- To Date > than from date 
+ To_date TIMESTAMP NOT NULL CHECK (To_date >= From_date),
  Car_id INT REFERENCES car(ID),
  Old_reservation INT,
- Status VARCHAR(10) CHECK(Status in ('Confirmed', 'Ongoing', 'Completed', 'Cancelled')),
+ Status VARCHAR(10) CHECK (Status in ('Confirmed', 'Ongoing', 'Completed', 'Cancelled'))
 );
 
 
 --- CUSTOMER_RESERVATION ---
---- (NOT HANDLED YET) Same person can not reserve more than one car at the same time
 
 CREATE TABLE customer_reservation(
-  Customer_email VARCHAR(100) REFERENCES customer(Email),
   Reservation_id INT REFERENCES reservation(ID),
-  check Customer_email 
-);
+  Customer_email VARCHAR(100) REFERENCES customer(Email)
+  );
 
