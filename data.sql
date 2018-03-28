@@ -88,7 +88,7 @@ insert into reservation values(22018,'2018-01-14 09:00:00','2018-01-20 14:00:00'
 insert into reservation values(22019,'2018-02-01 09:00:00','2018-02-03 16:00:00',111 ,NULL ,'Completed');
 insert into reservation values(22020,'2018-02-26 06:00:00','2018-03-07 12:00:00',113 ,NULL ,'Cancelled');
 insert into reservation values(22021,'2018-02-28 11:00:00','2018-03-08 23:00:00',113 ,22020 ,'Ongoing');
-insert into reservation values(22022,'2017-07-02 09:00:00','2018-07-05 21:30:00',113 ,NULL ,'Completed');
+insert into reservation values(22022,'2017-07-02 09:00:00','2017-07-05 21:30:00',113 ,NULL ,'Completed');
 insert into reservation values(22023,'2018-02-05 08:00:00','2018-02-08 18:00:00',114 ,NULL ,'Completed');
 insert into reservation values(22024,'2018-04-02 16:00:00','2018-04-06 16:00:00',116 ,NULL ,'Confirmed');
 insert into reservation values(22025,'2018-03-03 07:00:00','2018-03-15 23:30:00',116 ,NULL ,'Ongoing');

@@ -81,7 +81,7 @@ CREATE TABLE car(
   ID INT PRIMARY KEY,
   Licence_plate_number VARCHAR(100) NOT NULL UNIQUE,
 -- Station codes are used as a foreign key from rental stations 
-  Staion_code INT REFERENCES rentalstation(Station_code),
+  Station_code INT REFERENCES rentalstation(Station_code),
 -- Two different cars can have the same model IDs
   Model_id INT REFERENCES model(ID)
 );

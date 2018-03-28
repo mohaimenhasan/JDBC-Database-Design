@@ -9,7 +9,7 @@ Email:a.n@mail.com
 
 Name: Yu Chang
 Age: 42
-Email: y.c@mail.com
+Email: y.ch@mail.com
 
 Name: Ryan King
 Age: 52
@@ -454,7 +454,7 @@ Status: Ongoing
 
 ID: 22022
 From Date: 2017-07-02 09:00:00
-To Date: 2018-07-05 21:30:00
+To Date: 2017-07-05 21:30:00
 Car ID: 113
 Old Reservation ID: NULL
 Status: Completed
@@ -530,8 +530,8 @@ Old Reservation ID: NULL
 Status: Cancelled
 
 ID: 22033
-From Date: 2017-09-23 14:00:00
-To Date: 2017-09-23 17:00:00
+From Date: 2017-09-23 17:00:00
+To Date: 2017-09-23 14:00:00
 Car ID: 126
 Old Reservation ID: 22032
 Status: Completed
