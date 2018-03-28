@@ -1,6 +1,10 @@
 SET SEARCH_PATH TO carschema;
 drop table if exists q3 cascade;
 
+-- This query returns the car models based on reservations
+-- so if there's a different reservation it would return a different car
+
+
 
 -- CREATE a table for the query
 CREATE TABLE q3(
@@ -37,9 +41,9 @@ CREATE VIEW model_name AS
 	FROM toronto_cars JOIN model on Model_id = ID
 	ORDER BY Count DESC, Name;
 
-CREATE VIEW answer AS
+CREATE VIEW answer3 AS
 	SELECT Name 
 	FROM model_name limit 1;
 
 -- the answer to the query 
-insert into q3 (SELECT * from answer);
+insert into q3 (SELECT * from answer3);

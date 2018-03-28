@@ -6,7 +6,7 @@ drop table if exists q1 cascade;
 -- Create answer table:
 create table q1(
 	CUSTOMER_EMAIL VARCHAR(100),
-	CANCEL_RATIO INT
+	CANCEL_RATIO decimal
 );
 
 
@@ -71,8 +71,8 @@ CREATE VIEW ratio as
 	ORDER BY CANCEL_RATIO desc, CUSTOMER_EMAIL; 
 
 -- Returns the top two results from ratio
-CREATE VIEW answer as
+CREATE VIEW answer1 as
 	SELECT * from ratio limit 2;
 
 -- the answer to the query 
-insert into q1 (SELECT * from answer);
+insert into q1 (SELECT * from answer1);

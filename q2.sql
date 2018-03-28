@@ -34,11 +34,11 @@ CREATE VIEW drivers AS
 	GROUP BY Customer_email;
 
 -- Answer
-CREATE VIEW answer AS
+CREATE VIEW answer2 AS
 	SELECT Customer_email, times
 	FROM (SELECT row_number() over (ORDER BY (times) DESC, Customer_email) AS rank, Customer_email, times
         from drivers) AS ranking
 	WHERE rank <=2;
 
 
-insert into q2 (SELECT * FROM answer);
+insert into q2 (SELECT * FROM answer2);

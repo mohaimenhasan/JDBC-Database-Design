@@ -1,0 +1,237 @@
+csc343h-khanmo87=> \i runner.txt
+-- Loading schema and data:
+psql:schema.ddl:12: NOTICE:  drop cascades to 33 other objects
+DETAIL:  drop cascades to table carschema.customer
+drop cascades to table carschema.model
+drop cascades to table carschema.rentalstation
+drop cascades to table carschema.car
+drop cascades to table carschema.reservation
+drop cascades to table carschema.customer_reservation
+drop cascades to table carschema.q1
+drop cascades to view carschema.old_id
+drop cascades to view carschema.cancelled_id
+drop cascades to view carschema.cancel_no_old
+drop cascades to view carschema.find_max
+drop cascades to view carschema.total_reservation
+drop cascades to view carschema.total_max
+drop cascades to view carschema.ratio
+drop cascades to view carschema.answer1
+drop cascades to table carschema.q2
+drop cascades to view carschema.no_cancelled
+drop cascades to view carschema.counter
+drop cascades to view carschema.together
+drop cascades to view carschema.drivers
+drop cascades to view carschema.answer2
+drop cascades to table carschema.q3
+drop cascades to view carschema.all2017res
+drop cascades to view carschema.model_num
+drop cascades to view carschema.toronto_cars
+drop cascades to view carschema.model_name
+drop cascades to view carschema.answer3
+drop cascades to table carschema.q4
+drop cascades to view carschema.under_age
+drop cascades to view carschema.old_id_haha
+drop cascades to view carschema.changed
+drop cascades to view carschema.changed_under30
+drop cascades to view carschema.answer4
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+-- Query 1:
+SET
+psql:q1.sql:2: NOTICE:  table "q1" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 2
+-- Query 2:
+SET
+psql:q2.sql:2: NOTICE:  table "q2" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 2
+-- Query 3:
+SET
+psql:q3.sql:2: NOTICE:  table "q3" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 1
+-- Query 4:
+SET
+psql:q4.sql:2: NOTICE:  table "q4" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 1
+csc343h-khanmo87=>
