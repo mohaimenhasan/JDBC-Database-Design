@@ -42,3 +42,5 @@ CREATE VIEW answer2 AS
 
 
 insert into q2 (SELECT * FROM answer2);
+
+SELECT * from q2;

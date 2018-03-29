@@ -47,3 +47,5 @@ CREATE VIEW answer3 AS
 
 -- the answer to the query 
 insert into q3 (SELECT * from answer3);
+
+SELECT * from q3;

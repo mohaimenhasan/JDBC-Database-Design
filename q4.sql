@@ -46,3 +46,6 @@ CREATE VIEW answer4 AS
 
 -- the answer to the query 
 insert into q4 (SELECT * from answer4);
+
+
+SELECT * from q4;

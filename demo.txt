@@ -201,6 +201,12 @@ CREATE VIEW
 CREATE VIEW
 CREATE VIEW
 INSERT 0 2
+  customer_email   |      cancel_ratio
+-------------------+------------------------
+ jj.swtz@mail.com  | 1.00000000000000000000
+ malik_aa@mail.com | 0.50000000000000000000
+(2 rows)
+
 -- Query 2:
 SET
 psql:q2.sql:2: NOTICE:  table "q2" does not exist, skipping
@@ -212,6 +218,12 @@ CREATE VIEW
 CREATE VIEW
 CREATE VIEW
 INSERT 0 2
+ customer_email | num_shared_reservations
+----------------+-------------------------
+ a.n@mail.com   |                       1
+ cyngu@mail.com |                       1
+(2 rows)
+
 -- Query 3:
 SET
 psql:q3.sql:2: NOTICE:  table "q3" does not exist, skipping
@@ -223,6 +235,11 @@ CREATE VIEW
 CREATE VIEW
 CREATE VIEW
 INSERT 0 1
+ car_model
+-----------
+ BMW X5
+(1 row)
+
 -- Query 4:
 SET
 psql:q4.sql:2: NOTICE:  table "q4" does not exist, skipping
@@ -234,4 +251,7 @@ CREATE VIEW
 CREATE VIEW
 CREATE VIEW
 INSERT 0 1
-csc343h-khanmo87=>
+   customer_email
+--------------------
+ s.hilbert@mail.com
+(1 row)
